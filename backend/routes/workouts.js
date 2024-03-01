@@ -1,9 +1,9 @@
 const express = require('express')
 const {
-  createWorkout,
-  getWorkouts,
-  getWorkout,
-  deleteWorkout,
+  getWorkouts, 
+  getWorkout, 
+  createWorkout, 
+  deleteWorkout, 
   updateWorkout
 } = require('../controllers/workoutController')
 
