@@ -3,6 +3,8 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const workoutRoutes = require('./routes/workouts')
+const cors = require('cors')
+
 
 // express app
 const app = express()
@@ -30,3 +32,5 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => {
     console.log(err)
   }) 
+
+app.use(cors({origin: 'http://localhost:3000'}))
